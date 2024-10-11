@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const editoras_controller_1 = require("../../api/controllers/editoras_controller");
+const router = (0, express_1.Router)();
+router.get("/get-editoras", editoras_controller_1.getAllEditoras);
+router.post("/post-editoras", editoras_controller_1.createEditora);
+router.put("/put-editoras", editoras_controller_1.updateEditora);
+router.delete("/delete-editoras", editoras_controller_1.deleteEditora);
+exports.default = router;
